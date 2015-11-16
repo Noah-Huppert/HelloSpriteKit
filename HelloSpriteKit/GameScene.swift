@@ -21,18 +21,18 @@ class GameScene: SKScene {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch in touches {
             let touchLocation = touch.locationInNode(self)
-            let touchScaler = (size.height - touchLocation.y) / touchLocation.y// TODO: Figure out how to make destination of ninja star be offscreen with triangles of same ratios
-            
+            let touchOffsets = CGPoint(x: player.position.x - touchLocation.x,
+                                       y: player.position.y - touchLocation.y)
+            let targetLocation = CGPoint(x: size.width,
+                                         y: (touchOffsets.y / touchOffsets.x) * (size.width - touchLocation.x) + touchLocation.y)
+        
             let ninjaStar = SKSpriteNode(imageNamed: "projectile")
             
             ninjaStar.position = player.position
             
             addChild(ninjaStar)
             
-            let moveAction = SKAction.moveTo(CGPoint(
-                                                x: touchLocation.x * touchScaler,
-                                                y: touchLocation.y * touchScaler),
-                duration: 1.5)
+            let moveAction = SKAction.moveTo(targetLocation, duration: 1.5)
             let moveDoneAction = SKAction.removeFromParent()
             
             ninjaStar.runAction(SKAction.sequence([moveAction, moveDoneAction]))
