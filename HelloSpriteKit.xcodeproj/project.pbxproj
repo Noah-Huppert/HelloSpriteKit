@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1B034871BFB9EB30014C76A /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B034861BFB9EB30014C76A /* PhysicsCategory.swift */; };
 		C1B515E11BF50FA100DBF6DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B515E01BF50FA100DBF6DE /* AppDelegate.swift */; };
 		C1B515E51BF50FA100DBF6DE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B515E41BF50FA100DBF6DE /* GameScene.swift */; };
 		C1B515E71BF50FA100DBF6DE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B515E61BF50FA100DBF6DE /* GameViewController.swift */; };
@@ -15,8 +16,8 @@
 		C1B515EF1BF50FA100DBF6DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B515ED1BF50FA100DBF6DE /* LaunchScreen.storyboard */; };
 		C1B515FA1BF50FA100DBF6DE /* HelloSpriteKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B515F91BF50FA100DBF6DE /* HelloSpriteKitTests.swift */; };
 		C1B516051BF50FA100DBF6DE /* HelloSpriteKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B516041BF50FA100DBF6DE /* HelloSpriteKitUITests.swift */; };
-		C1B516141BF5105200DBF6DE /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = C1B516121BF5105200DBF6DE /* Sounds */; settings = {ASSET_TAGS = (); }; };
-		C1B516151BF5105200DBF6DE /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C1B516131BF5105200DBF6DE /* sprites.atlas */; settings = {ASSET_TAGS = (); }; };
+		C1B516141BF5105200DBF6DE /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = C1B516121BF5105200DBF6DE /* Sounds */; };
+		C1B516151BF5105200DBF6DE /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C1B516131BF5105200DBF6DE /* sprites.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C1B034861BFB9EB30014C76A /* PhysicsCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 		C1B515DD1BF50FA100DBF6DE /* HelloSpriteKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSpriteKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B515E01BF50FA100DBF6DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B515E41BF50FA100DBF6DE /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				C1B515EB1BF50FA100DBF6DE /* Assets.xcassets */,
 				C1B515ED1BF50FA100DBF6DE /* LaunchScreen.storyboard */,
 				C1B515F01BF50FA100DBF6DE /* Info.plist */,
+				C1B034861BFB9EB30014C76A /* PhysicsCategory.swift */,
 			);
 			path = HelloSpriteKit;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1B515E51BF50FA100DBF6DE /* GameScene.swift in Sources */,
+				C1B034871BFB9EB30014C76A /* PhysicsCategory.swift in Sources */,
 				C1B515E71BF50FA100DBF6DE /* GameViewController.swift in Sources */,
 				C1B515E11BF50FA100DBF6DE /* AppDelegate.swift in Sources */,
 			);
@@ -497,6 +501,7 @@
 				C1B5160B1BF50FA100DBF6DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1B5160C1BF50FA100DBF6DE /* Build configuration list for PBXNativeTarget "HelloSpriteKitTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +510,7 @@
 				C1B5160E1BF50FA100DBF6DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1B5160F1BF50FA100DBF6DE /* Build configuration list for PBXNativeTarget "HelloSpriteKitUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +519,7 @@
 				C1B516111BF50FA100DBF6DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

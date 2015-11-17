@@ -1,6 +1,6 @@
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     let player = SKSpriteNode(imageNamed: "player")
     
     override func didMoveToView(view: SKView) {
@@ -9,6 +9,9 @@ class GameScene: SKScene {
         player.position = CGPoint(x: size.height * 0.1, y: size.height * 0.5)
         
         addChild(player)
+        
+        physicsWorld.gravity = CGVectorMake(0, 0)
+        physicsWorld.contactDelegate = self
         
         runAction(SKAction.repeatActionForever(
             SKAction.sequence([
@@ -32,10 +35,25 @@ class GameScene: SKScene {
             
             addChild(ninjaStar)
             
+            ninjaStar.physicsBody = SKPhysicsBody(circleOfRadius: ninjaStar.size.width / 2)
+            ninjaStar.physicsBody?.dynamic = true
+            ninjaStar.physicsBody?.categoryBitMask = PhysicsCategory.Projectile.rawValue
+            ninjaStar.physicsBody?.contactTestBitMask = PhysicsCategory.Monster.rawValue
+            ninjaStar.physicsBody?.collisionBitMask = PhysicsCategory.None.rawValue
+            ninjaStar.physicsBody?.usesPreciseCollisionDetection = true
+            
             let moveAction = SKAction.moveTo(targetLocation, duration: 1.5)
             let moveDoneAction = SKAction.removeFromParent()
             
             ninjaStar.runAction(SKAction.sequence([moveAction, moveDoneAction]))
+        }
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        if contact.bodyA.categoryBitMask == contact.bodyB.categoryBitMask {
+            
+        } else {
+            switch
         }
     }
     
@@ -48,6 +66,12 @@ class GameScene: SKScene {
         )
         
         addChild(monster)
+        
+        monster.physicsBody = SKPhysicsBody(rectangleOfSize: monster.size)
+        monster.physicsBody?.dynamic = true
+        monster.physicsBody?.categoryBitMask = PhysicsCategory.Monster.rawValue
+        monster.physicsBody?.contactTestBitMask = PhysicsCategory.Projectile.rawValue
+        monster.physicsBody?.collisionBitMask = PhysicsCategory.None.rawValue
         
         let actionMove = SKAction.moveTo(
             CGPoint(x: -monster.size.width / 2, y: monster.position.y),
