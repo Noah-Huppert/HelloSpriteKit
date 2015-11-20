@@ -50,10 +50,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
-        if contact.bodyA.categoryBitMask == contact.bodyB.categoryBitMask {
+        let items: UnorderedSet<UInt32> = UnorderedSet(initialData: [contact.bodyA.categoryBitMask, contact.bodyB.categoryBitMask])
+        
+        if(items.equal(UnorderedSet<UInt32>(initialData: [PhysicsCategory.Projectile.rawValue, PhysicsCategory.Monster.rawValue]))) {
+            if contact.bodyA.categoryBitMask == PhysicsCategory.Monster.rawValue {
+                contact.bodyA.node?.removeFromParent()
+            }
             
-        } else {
-            switch
+            if contact.bodyB.categoryBitMask == PhysicsCategory.Monster.rawValue {
+                contact.bodyB.node?.removeFromParent()
+            }
         }
     }
     

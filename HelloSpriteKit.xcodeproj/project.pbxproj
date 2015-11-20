@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C12330B01BFF976F0034CFB3 /* UnorderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12330AF1BFF976F0034CFB3 /* UnorderedSet.swift */; };
 		C1B034871BFB9EB30014C76A /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B034861BFB9EB30014C76A /* PhysicsCategory.swift */; };
 		C1B515E11BF50FA100DBF6DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B515E01BF50FA100DBF6DE /* AppDelegate.swift */; };
 		C1B515E51BF50FA100DBF6DE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B515E41BF50FA100DBF6DE /* GameScene.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C12330AF1BFF976F0034CFB3 /* UnorderedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnorderedSet.swift; sourceTree = "<group>"; };
 		C1B034861BFB9EB30014C76A /* PhysicsCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 		C1B515DD1BF50FA100DBF6DE /* HelloSpriteKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSpriteKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B515E01BF50FA100DBF6DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				C1B515ED1BF50FA100DBF6DE /* LaunchScreen.storyboard */,
 				C1B515F01BF50FA100DBF6DE /* Info.plist */,
 				C1B034861BFB9EB30014C76A /* PhysicsCategory.swift */,
+				C12330AF1BFF976F0034CFB3 /* UnorderedSet.swift */,
 			);
 			path = HelloSpriteKit;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1B515E51BF50FA100DBF6DE /* GameScene.swift in Sources */,
+				C12330B01BFF976F0034CFB3 /* UnorderedSet.swift in Sources */,
 				C1B034871BFB9EB30014C76A /* PhysicsCategory.swift in Sources */,
 				C1B515E71BF50FA100DBF6DE /* GameViewController.swift in Sources */,
 				C1B515E11BF50FA100DBF6DE /* AppDelegate.swift in Sources */,
